@@ -10,22 +10,33 @@ import jakarta.persistence.Table;
 public class Produto {
 
 
+
     @Id
-    @Column(name = "idProduto")
-    private Long id;
+    @Column(name = "idproduto")
+    private Integer id;
 
     @Column
     private String nome;
 
     @Column
-    private double valor;
+    private Integer valor;
 
-    public void setId(Long id) {
+    public Produto(Integer id, String nome, Integer valor) {
         this.id = id;
+        this.nome = nome;
+        this.valor = valor;
     }
 
-    public Long getId() {
+    public Produto() {
+
+    }
+
+    public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -36,11 +47,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public double getValor() {
+    public Integer getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor(Integer valor) {
         this.valor = valor;
     }
 }

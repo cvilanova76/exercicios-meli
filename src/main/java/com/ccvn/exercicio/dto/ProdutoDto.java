@@ -1,19 +1,21 @@
 package com.ccvn.exercicio.dto;
 
 public class ProdutoDto {
-
-    private Long id;
-
+    private Integer id;
     private String nome;
+    private Integer valor;
 
-    private double valor;
+    public ProdutoDto(Integer id, String nome, Integer valor){
+        this.id = id;
+        this.nome = nome;
+        this.valor = valor;
+    }
 
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -25,11 +27,11 @@ public class ProdutoDto {
         this.nome = nome;
     }
 
-    public double getValor() {
+    public Integer getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor(Integer valor) {
         this.valor = valor;
     }
 }
